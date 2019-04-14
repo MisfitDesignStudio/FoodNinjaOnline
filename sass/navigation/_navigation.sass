@@ -1,0 +1,95 @@
+// Main Menu
+.site-header
+	background-color: $color__main
+	padding: 0
+	&-container
+		display: flex
+		justify-content: space-between
+		position: relative
+
+.nav-logo-link
+	display: block
+	height: 60px
+	padding: 10px 0
+	img
+		display: block
+		height: 40px
+		object-fit: cover
+.menu-list
+	margin: 0
+	padding: 0
+	list-style: none
+	display: flex
+	@include tablet-m
+		position: absolute
+		left: 0
+		top: 60px
+		width: 100%
+		height: calc(100vh - 60px)
+		background-color: $color__main
+		flex-direction: column
+		justify-content: space-around
+		align-items: flex-end
+		clip-path: circle(0 at 100% 0%)
+		transition: all 0.5s ease-in-out
+		&.open
+			clip-path: circle(calc(100vh + 50%) at 100% 0%)	
+
+	.menu-item
+		display: flex
+		margin-left: 1rem
+		@include tablet-m
+			height: 100%
+			width: 100%
+			display: flex
+			justify-content: flex-end
+			margin-left: 0
+		a
+			color: white
+			text-decoration: none
+			font-size: 0.8rem
+			text-transform: uppercase
+			display: flex
+			align-items: center
+			justify-content: center
+			@include tablet-m
+				padding-right: 20px
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: flex-end
+			&:visited
+				color: white
+			&:hover,
+			&:focus,
+			&:active
+				color: white
+			&:focus
+				outline: thin dotted
+			&:hover,
+			&:active
+				outline: 0
+
+.menu-hamburger
+	display: none
+	@include tablet-m
+		display: block
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+	.line
+		width: 25px
+		height: 3px
+		margin: 5px 0
+		background-color: white
+		transition: all ease-in-out 300ms
+	.line2
+	&.active
+		.line1
+			transform: rotate(45deg) translate(5px,6px)
+		.line2
+			opacity: 0
+		.line3
+			transform: rotate(-45deg) translate(5px,-6px)

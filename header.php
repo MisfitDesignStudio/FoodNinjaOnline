@@ -26,12 +26,22 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'foodninjaonline'); ?></a>
 
 		<header id="masthead" class="site-header">
-			<div class="site-branding">
+			<div class="container site-header-container">
 
-			</div><!-- .site-branding -->
+				<div class="site-branding">
+					<a class="nav-logo-link" href="<?php echo get_home_url(); ?>">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/img/nav-logo-kitchen.svg" alt="">
+					</a>
+				</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-hamburger">
+					<div class="line line1"></div>
+					<div class="line line2"></div>
+					<div class="line line3"></div>
+				</div>
+
 				<?php
+				// Begin ul.menu-list
 				wp_nav_menu(array(
 					'theme_location'	=> 'main-menu',
 					'menu_id'					=> 'primary-menu',
@@ -39,7 +49,9 @@
 					'items_wrap'			=> '<ul class="menu-list">%3$s</ul>',
 				));
 				?>
-			</nav><!-- #site-navigation -->
+
+			</div>
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
+			<div class="container">
