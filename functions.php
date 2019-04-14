@@ -44,7 +44,7 @@ if ( ! function_exists( 'foodninjaonline_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'foodninjaonline' ),
+			'main-menu' => esc_html__( 'Primary', 'foodninjaonline' ),
 		) );
 
 		/*
@@ -106,7 +106,7 @@ add_action( 'after_setup_theme', 'foodninjaonline_content_width', 0 );
 function foodninjaonline_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'foodninjaonline' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'main-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'foodninjaonline' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -120,6 +120,9 @@ add_action( 'widgets_init', 'foodninjaonline_widgets_init' );
  * Enqueue scripts and styles.
  */
 function foodninjaonline_scripts() {
+	wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700,800,900');
+	wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Ubuntu:400,500,700');
+	wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.4.2/css/all.css');
 	wp_enqueue_style( 'foodninjaonline-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'foodninjaonline-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

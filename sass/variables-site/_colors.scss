@@ -1,3 +1,7 @@
+$color__main: #3bb44a;
+$color__light-grey: #efefef;
+$color__dark-grey: #333333;
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -8,8 +12,8 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
+$color__link: $color__main;
+$color__link-visited: $color__main;
 $color__link-hover: midnightblue;
 $color__text-main: #404040;
 
