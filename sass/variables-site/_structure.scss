@@ -1,2 +1,12 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.section {
+	padding: 1.5rem 0;
+}

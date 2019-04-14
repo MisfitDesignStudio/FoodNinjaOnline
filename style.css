@@ -41,6 +41,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 1.5rem 0;
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
