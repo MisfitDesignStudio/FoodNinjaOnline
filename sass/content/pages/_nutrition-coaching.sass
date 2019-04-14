@@ -1,0 +1,66 @@
+.hiw-step
+  width: 100%
+  background-color: #888
+  background-blend-mode: multiply
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  display: flex
+  padding: 8rem
+  color: white
+  @include tablet-m
+    padding: 4rem 2rem
+    flex-direction: column
+  &:nth-child(odd)
+    .hiw-step-content
+      margin-left: auto
+
+  &-content
+    max-width: 60%
+    @include tablet-m
+      max-width: 100%
+
+  &-title
+    font-size: 2.5rem
+    @include tablet-s
+      font-size: 1.5rem
+    &::after
+      content: ''
+      width: 15%
+      height: 3px
+      background-color: white
+      display: block
+      margin: 2rem 0
+  &-description
+    font-size: 1.3rem
+
+.hiw-step-price-cards
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+  grid-gap: 1rem
+
+.price-card
+  background: white
+  display: flex
+  flex-direction: column
+  color: $color__text-main
+  .btn
+    justify-self: flex-end
+    margin-top: auto
+  &-title
+    color: $color__main
+    background-color: $color__light-grey
+    text-align: center
+    padding: 0.8rem
+    font-size: 1rem
+  &-price
+    color: $color__main
+    font-size: 2rem
+    text-align: center
+    margin: 0
+    padding: 1.2rem
+    font-weight: bold
+  &-description
+    margin: 0
+    padding: 1.2rem
+    line-height: 1.6
