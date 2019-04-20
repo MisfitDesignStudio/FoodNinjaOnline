@@ -14,7 +14,7 @@ get_header();
     while (have_posts()) :
       the_post();
 
-      get_template_part('template-parts/content', 'page-nutrition-coaching');
+      get_template_part('template-parts/content', 'page-success-stories');
 
     endwhile; // End of the loop.
     ?>

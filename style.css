@@ -1027,6 +1027,11 @@ textarea {
   background-color: #59c967;
 }
 
+.btn--xsmall {
+  font-size: 0.7rem;
+  padding: 0.6rem;
+}
+
 .btn--small {
   font-size: 0.8rem;
   padding: 0.8rem;
@@ -1144,6 +1149,86 @@ textarea {
   margin: 0;
   padding: 1.2rem;
   line-height: 1.6;
+}
+
+/* Cards - Success Stories */
+.success-stories-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(380px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-gap: 2rem;
+  grid-auto-rows: 300px;
+  grid-auto-rows: auto;
+}
+
+.card--success-story {
+  display: -ms-grid;
+  display: grid;
+  padding: 0;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 3px rgba(128, 128, 128, 0.5);
+          box-shadow: 0 0 3px rgba(128, 128, 128, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+  .card--success-story {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.card--success-story__image {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card--success-story__image {
+    height: 200px;
+  }
+}
+
+.card--success-story__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.card--success-story__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.card--success-story__client {
+  text-align: center;
+  color: #3bb44a;
+  padding-top: 15px;
+}
+
+.card--success-story__excerpt {
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /*--------------------------------------------------------------
