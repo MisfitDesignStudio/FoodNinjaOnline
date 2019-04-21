@@ -1,0 +1,53 @@
+.stats
+  border: 1px solid $color__light-grey  
+  font-size: 0.85rem
+.stats-row
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  padding: 1rem 0
+  text-align: center
+  &:nth-child(odd)
+    background-color: $color__light-grey
+  &-two
+    display: grid
+    grid-template-columns: 1fr 1fr
+    text-align: left
+.client-name,
+.client-location,
+.personal-goal
+  padding: 1rem
+  font-size: 1.2rem
+  font-weight: normal
+  border: 1px solid $color__light-grey
+  span
+    color: $color__main
+    font-weight: bold
+
+.stat-name,
+.before-value,
+.after-value
+  border-right: 1px solid $color__light-grey
+
+.stat-name-header,
+.before-value-header,
+.after-value-header,
+.difference-header
+  font-weight: bold
+  text-transform: uppercase
+
+.images-row
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  .success-image
+    min-width: 40%
+    max-width: 45%
+    height: 100%
+    margin: 0.5rem
+    img
+      width: 100%
+      height: 100%
+      display: block
+      object-fit: cover
+      object-position: center
+    
