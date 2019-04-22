@@ -24,13 +24,18 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'foodninjaonline'); ?></a>
-
+		<div class="social-bar">
+			<div class="container social-bar-wrapper">
+				<a href="https://www.instagram.com/iamthefoodninja/"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.facebook.com/iamthefoodninja/"><i class="fab fa-facebook-square"></i></a>
+			</div>
+		</div>
 		<header id="masthead" class="site-header">
 			<div class="container site-header-container">
 
 				<div class="site-branding">
 					<a class="nav-logo-link" href="<?php echo get_home_url(); ?>">
-						<img src="<?php echo get_template_directory_uri() ?>/assets/img/nav-logo-kitchen.svg" alt="">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/img/nav-logo.svg" alt="">
 					</a>
 				</div><!-- .site-branding -->
 

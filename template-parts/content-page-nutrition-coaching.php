@@ -26,7 +26,7 @@
 // check if the repeater field has rows of data
 if (have_rows('how_it_works_step')) : ?>
 
-  <h1 class="section-title">How it works</h1>
+  <h1 class="section-title section-title--center">How it works</h1>
 
   <?php
   // loop through the rows of data

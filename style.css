@@ -495,6 +495,11 @@ big {
 .section-title {
   color: #3bb44a;
   text-transform: uppercase;
+  margin: 1rem 0 2rem;
+}
+
+.section-title--center {
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -655,6 +660,33 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+.social-bar {
+  background-color: #333333;
+}
+
+.social-bar-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 5px 0;
+}
+
+.social-bar-wrapper a {
+  display: inline-block;
+  color: #a3a3a3;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.social-bar-wrapper a:hover {
+  color: #efefef;
+}
+
 .site-header {
   background-color: #3bb44a;
   padding: 0;
@@ -690,6 +722,8 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 999;
 }
 
 @media only screen and (max-width: 790px) {

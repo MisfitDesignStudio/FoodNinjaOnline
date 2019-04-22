@@ -1,3 +1,19 @@
+//Social bar
+.social-bar
+	background-color: $color__dark-grey
+	&-wrapper
+		display: flex
+		justify-content: flex-end
+		padding: 5px 0
+		a
+			display: inline-block
+			color: darken($color__light-grey, 30)
+			margin-left: 1rem
+			font-size: 0.9rem
+			transition: all ease-in-out 300ms
+			&:hover
+				color: $color__light-grey
+	
 // Main Menu
 .site-header
 	background-color: $color__main
@@ -20,6 +36,8 @@
 	padding: 0
 	list-style: none
 	display: flex
+	position: relative
+	z-index: 999
 	@include tablet-m
 		position: absolute
 		left: 0
