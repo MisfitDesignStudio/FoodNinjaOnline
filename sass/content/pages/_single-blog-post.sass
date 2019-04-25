@@ -1,0 +1,123 @@
+.single-blog-post
+  padding: 3rem 0
+
+  &__meta
+    background-color: $color__dark-grey
+    padding: 0.6rem
+    font-size: 0.7rem
+    color: $color__light-grey
+    text-transform: uppercase
+    // margin-bottom: 1rem
+    a
+      color: $color__light-grey
+      font-weight: bold
+      text-decoration: none
+      display: inline-block
+      margin: 0 0.3rem
+      &:hover
+        text-decoration: underline
+
+  &__image
+    width: 100%
+    height: 450px
+    overflow: hidden
+    @include tablet-s
+      height: 250px
+    img
+      display: block
+      margin: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+
+  &__title
+    background: $color__main
+    color: white
+    padding: 0.6rem
+    margin: 0
+
+  &__content
+    background-color: $color__light-grey
+    margin: 0
+    padding: 1rem 1.6rem
+    line-height: 1.6
+    a
+      color: $color__main
+
+
+/* Post Navigation Section */
+.post-navigation
+  background-color: $color__dark-grey
+  font-size: 0.8rem
+  margin-bottom: 2rem
+  .nav-links
+    display: flex
+    justify-content: space-between
+    padding: 0.8rem
+    .nav-next
+      text-align: right
+    a
+      color: $color__light-grey
+      text-transform: uppercase
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+/* Comments Section */
+.comments-area
+
+.comments-title
+  font-size: 1rem
+  color: $color__main
+  padding-bottom: 0.5rem
+  margin-bottom: 2rem
+  border-bottom: 1px solid $color__main
+
+.comment-list
+  list-style: none
+  padding: 0
+  margin: 0
+
+.comment
+  background-color: $color__light-grey
+  // border-left: 1px solid $color__main
+  // padding-left: 1rem
+  padding: 1rem
+
+.comment-body
+
+.comment-meta
+  background-color: $color__dark-grey
+  font-size: 0.8rem
+  color: $color__light-grey
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-right: 1rem
+  a
+    font-size: 0.8rem
+    color: $color__light-grey
+
+.comment-author
+  display: flex
+  align-items: center
+  b
+    margin: 0 0.5rem
+
+.comment-content
+  background-color: rgba(white, 0.8)
+  font-size: 0.9rem
+  padding: 0.9rem
+
+ol.children
+  padding: 0
+
+.comment-reply-link
+  color: $color__main
+  text-decoration: none
+  font-size: 0.8rem
+  display: inline-block
+  margin: 1rem 0
+  &:hover
+    text-decoration: underline

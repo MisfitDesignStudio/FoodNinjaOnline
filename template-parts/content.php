@@ -9,51 +9,22 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class('single-blog-post'); ?>>
+	<div class="single-blog-post__meta">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				foodninjaonline_posted_on();
-				foodninjaonline_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php foodninjaonline_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'foodninjaonline' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'foodninjaonline' ),
-			'after'  => '</div>',
-		) );
+		foodninjaonline_posted_on();
+		foodninjaonline_posted_by();
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
-	<footer class="entry-footer">
-		<?php foodninjaonline_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div class="single-blog-post__image">
+		<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+	</div>
+
+	<h1 class="single-blog-post__title"><?php the_title(); ?></h1>
+
+	<div class="single-blog-post__content">
+		<?php the_content(); ?>
+	</div>
+
 </article><!-- #post-<?php the_ID(); ?> -->
